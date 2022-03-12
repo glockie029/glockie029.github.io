@@ -17,16 +17,16 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>归档 | Glockie</title>
+  <title>标签: python | Glockie</title>
   <meta property="og:type" content="website">
 <meta property="og:title" content="Glockie">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/python/index.html">
 <meta property="og:site_name" content="Glockie">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://yoursite.com/archives/index.html">
+  <link rel="canonical" href="http://yoursite.com/tags/python/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Glockie" type="application/atom+xml">
   
@@ -293,184 +293,52 @@
 </aside>
 
   
-  
-<main class="main" role="main">
-  	<article class="content article article-archives article-type-list" itemscope="">
-	    <header class="article-header">
-	      <h1 itemprop="title">归档</h1>
-	      <p class="text-muted">共 2 篇文章</p>
-	    </header>
-	    <div class="article-body">
-	      
-  
-    <div class="content">
-  <article id="post-json_cvs" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <main class="main" role="main">
+  <article class="content article article-tags post-type-list" itemscope="">
+    <header class="article-header">
+      <h1 itemprop="name" class="hidden-xs">标签: python</h1>
+      <p class="text-muted hidden-xs">共 1 篇文章</p>
+      <nav role="navigation" id="nav-main" class="okayNav">
+        <ul>
+          <li><a href="/tags">All</a></li>
+          
+          <li><a href="/tags/python/">python</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+    <!-- /header -->
+    <div class="article-body">
+      <div class="row">
+        
+<div class="col-md-6">
     
-    <div class="article-header">
-      
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/11/json_cvs/">json-cvs.md</a>
-    </h1>
-  
-
-      
-      <div class="article-meta">
-        <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2022/03/11/json_cvs/" class="article-date">
-	  <time datetime="2022-03-11T07:43:14.000Z" itemprop="datePublished">3月 11 2022</time>
-	</a>
-</span>
-        
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/python/">python</a>
-  </span>
-
-        
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link-link" href="/tags/python/" rel="tag">python</a>
-  </span>
-
-
-        
-
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2022/03/11/json_cvs/#comments" class="article-comment-link">评论</a></span>
-        
-      </div>
-    </div>
-    <div class="article-entry marked-body" itemprop="articleBody">
-      
-        <p>#python–Json转cvs  </p>
-<p>记录下学习python的练手小项目.<br>Github:<a target="_blank" rel="noopener" href="https://github.com/Python-World/python-mini-projects/tree/master/projects/Convert_JSON_to_CSV">🔗项目链接</a>  </p>
-  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ = <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">	<span class="keyword">try</span>:</span><br><span class="line">		<span class="keyword">with</span> ope(<span class="string">&#x27;input.json&#x27;</span>,<span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">			data = json.loads(f.read())</span><br><span class="line">		</span><br><span class="line">		output = <span class="string">&#x27;,&#x27;</span>.join([*data[<span class="number">0</span>]])</span><br><span class="line">		<span class="keyword">for</span> obj <span class="keyword">in</span> data:</span><br><span class="line">			output += (<span class="string">f&#x27;\n<span class="subst">&#123;obj[<span class="string">&quot;name&quot;</span>]&#125;</span>,<span class="subst">&#123;obj[<span class="string">&quot;age&quot;</span>]&#125;</span>,<span class="subst">&#123;obj[<span class="string">&quot;work&quot;</span>]&#125;</span>&#x27;</span>)</span><br><span class="line">			</span><br><span class="line">		<span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;output.cvs&#x27;</span>,<span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">			f.write(output)</span><br><span class="line">	<span class="keyword">except</span> Exception <span class="keyword">as</span> es:</span><br><span class="line">		<span class="built_in">print</span>(<span class="string">f&#x27;Error: <span class="subst">&#123;<span class="built_in">str</span>(ex)&#125;</span>&#x27;</span>)	</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <div class="article-footer">
-      <blockquote class="mt-2x">
-  <ul class="post-copyright list-unstyled">
-    
-    <li class="post-copyright-link hidden-xs">
-      <strong>本文链接：</strong>
-      <a href="http://yoursite.com/2022/03/11/json_cvs/" title="json-cvs.md" target="_blank" rel="external">http://yoursite.com/2022/03/11/json_cvs/</a>
-    </li>
-    
-    <li class="post-copyright-license">
-      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
-    </li>
-  </ul>
-</blockquote>
-
-
-<div class="panel panel-default panel-badger">
+<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
   <div class="panel-body">
-    <figure class="media">
-      <div class="media-left">
-        <a href="https://github.com/glockie029/glockie029.github.io/" target="_blank" class="img-burn thumb-sm visible-lg">
-          <img src="/images/ws.jpg" class="img-rounded w-full" alt="">
-        </a>
-      </div>
-      <div class="media-body">
-        <h3 class="media-heading"><a href="https://github.com/glockie029/glockie029.github.io/" target="_blank"><span class="text-dark">Glockie</span><small class="ml-1x">This is Glockie!</small></a></h3>
-        <div>个人简介。</div>
-      </div>
-    </figure>
-  </div>
+     <div class="article-meta">
+       <time datetime="2022-03-11T07:43:14.000Z" itemprop="datePublished">3月 11 2022</time>
+     </div>
+     <h3 class="article-title" itemprop="name">
+       <a class="article-link" href="/2022/03/11/json_cvs/">json-cvs.md</a>
+     </h3>
+   </div>
+   
+   <div class="panel-footer">
+     
+      <a href="/tags/python/" class="label label-default mb">python</a>
+     
+     
+   </div>
+   
+</article>
+
+
 </div>
 
-
+      </div>
     </div>
   </article>
-  
-</div>
-
-  
-    <div class="content">
-  <article id="post-My-hexo" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
-    
-    <div class="article-header">
-      
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/03/11/My-hexo/">My hexo!</a>
-    </h1>
-  
-
-      
-      <div class="article-meta">
-        <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2022/03/11/My-hexo/" class="article-date">
-	  <time datetime="2022-03-11T06:12:15.000Z" itemprop="datePublished">3月 11 2022</time>
-	</a>
-</span>
-        
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/hexo/">hexo</a>
-  </span>
-
-        
-
-        
-
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2022/03/11/My-hexo/#comments" class="article-comment-link">评论</a></span>
-        
-      </div>
-    </div>
-    <div class="article-entry marked-body" itemprop="articleBody">
-      
-        <h1 id="this-is-my-one-hexo"><a href="#this-is-my-one-hexo" class="headerlink" title="this is my one hexo!"></a>this is my one hexo!</h1>
-      
-    </div>
-    <div class="article-footer">
-      <blockquote class="mt-2x">
-  <ul class="post-copyright list-unstyled">
-    
-    <li class="post-copyright-link hidden-xs">
-      <strong>本文链接：</strong>
-      <a href="http://yoursite.com/2022/03/11/My-hexo/" title="My hexo!" target="_blank" rel="external">http://yoursite.com/2022/03/11/My-hexo/</a>
-    </li>
-    
-    <li class="post-copyright-license">
-      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
-    </li>
-  </ul>
-</blockquote>
-
-
-<div class="panel panel-default panel-badger">
-  <div class="panel-body">
-    <figure class="media">
-      <div class="media-left">
-        <a href="https://github.com/glockie029/glockie029.github.io/" target="_blank" class="img-burn thumb-sm visible-lg">
-          <img src="/images/ws.jpg" class="img-rounded w-full" alt="">
-        </a>
-      </div>
-      <div class="media-body">
-        <h3 class="media-heading"><a href="https://github.com/glockie029/glockie029.github.io/" target="_blank"><span class="text-dark">Glockie</span><small class="ml-1x">This is Glockie!</small></a></h3>
-        <div>个人简介。</div>
-      </div>
-    </figure>
-  </div>
-</div>
-
-
-    </div>
-  </article>
-  
-</div>
-
-  
-
-	    </div>
-  	</article>
-  	 	
+   
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">

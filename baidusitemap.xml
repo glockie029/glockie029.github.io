@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/2022/03/11/json_cvs/</loc>
+    <lastmod>2022-03-12</lastmod>
+  </url>
+  <url>
     <loc>http://yoursite.com/2022/03/11/My-hexo/</loc>
-    <lastmod>2022-03-11</lastmod>
+    <lastmod>2022-03-12</lastmod>
   </url>
 </urlset> 
