@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-03-12T09:41:38.392Z</updated>
+  <updated>2022-03-12T09:44:10.364Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>json-cvs.md</title>
+    <title>json格式转cvs</title>
     <link href="http://yoursite.com/2022/03/11/json_cvs/"/>
     <id>http://yoursite.com/2022/03/11/json_cvs/</id>
     <published>2022-03-11T07:43:14.000Z</published>
-    <updated>2022-03-12T09:41:38.392Z</updated>
+    <updated>2022-03-12T09:44:10.364Z</updated>
     
     <content type="html"><![CDATA[<p>#python–Json转cvs  </p><p>记录下学习python的练手小项目.<br>Github:<a href="https://github.com/Python-World/python-mini-projects/tree/master/projects/Convert_JSON_to_CSV">🔗项目链接</a>  </p>  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ = <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line"><span class="keyword">with</span> ope(<span class="string">&#x27;input.json&#x27;</span>,<span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">data = json.loads(f.read())</span><br><span class="line"></span><br><span class="line">output = <span class="string">&#x27;,&#x27;</span>.join([*data[<span class="number">0</span>]])</span><br><span class="line"><span class="keyword">for</span> obj <span class="keyword">in</span> data:</span><br><span class="line">output += (<span class="string">f&#x27;\n<span class="subst">&#123;obj[<span class="string">&quot;name&quot;</span>]&#125;</span>,<span class="subst">&#123;obj[<span class="string">&quot;age&quot;</span>]&#125;</span>,<span class="subst">&#123;obj[<span class="string">&quot;work&quot;</span>]&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;output.cvs&#x27;</span>,<span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">f.write(output)</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> es:</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;Error: <span class="subst">&#123;<span class="built_in">str</span>(ex)&#125;</span>&#x27;</span>)</span><br></pre></td></tr></table></figure>]]></content>
     
